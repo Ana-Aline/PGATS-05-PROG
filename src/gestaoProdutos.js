@@ -32,7 +32,7 @@ const livros = [
 ];
 
 export function consultarTituloPorId(Id) {
-  if (Id < 1) {
+  if (Id < 1 || !Id) {
     throw new Error('O id deve ser maior que 0');
   }
   for (let i = 0; i < livros.length; i++) {
