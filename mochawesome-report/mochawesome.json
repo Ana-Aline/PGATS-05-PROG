@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-04T18:29:11.344Z",
+    "end": "2026-05-04T18:29:11.351Z",
+    "duration": 7,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8a366be1-5c29-4272-be3f-ccdb600a2566",
+      "title": "",
+      "fullFile": "C:\\Users\\teste\\OneDrive\\Documentos\\PGTS\\Aula5\\test\\gestaoProdutos.test.js",
+      "file": "\\test\\gestaoProdutos.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "471f5d9a-0d30-4a1a-9c3c-fa937a3da87d",
+          "title": "Testes de gestão de produto",
+          "fullFile": "C:\\Users\\teste\\OneDrive\\Documentos\\PGTS\\Aula5\\test\\gestaoProdutos.test.js",
+          "file": "\\test\\gestaoProdutos.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "8380ada7-c5a7-47e2-a2ea-49a89b649d4f",
+              "title": "Testes de consulta de produto",
+              "fullFile": "C:\\Users\\teste\\OneDrive\\Documentos\\PGTS\\Aula5\\test\\gestaoProdutos.test.js",
+              "file": "\\test\\gestaoProdutos.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Validar consultar título está retornando o título o correto",
+                  "fullTitle": "Testes de gestão de produto Testes de consulta de produto Validar consultar título está retornando o título o correto",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//arrange\nconst idProduto = 1;\nconst tituloProduto = 'livro 1';\n//act\nconst tituloRetornado = consultarTituloPorId(idProduto);\n//assert\nassert.equal(tituloProduto, tituloRetornado);",
+                  "err": {},
+                  "uuid": "40b9e410-0cb6-4227-a3ff-cd6147710505",
+                  "parentUUID": "8380ada7-c5a7-47e2-a2ea-49a89b649d4f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar se o ID foi informado e é maior que 0",
+                  "fullTitle": "Testes de gestão de produto Testes de consulta de produto Validar se o ID foi informado e é maior que 0",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//arrange\nconst idProduto = 0;\nconst mensagemEsperada = 'O id deve ser maior que 0';\n//act - assert\nassert.throws(() => {\n    consultarTituloPorId(idProduto);\n}, Error, mensagemEsperada)",
+                  "err": {},
+                  "uuid": "9afa229d-6791-4f51-bdd8-0eee53955668",
+                  "parentUUID": "8380ada7-c5a7-47e2-a2ea-49a89b649d4f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar se o ID existe",
+                  "fullTitle": "Testes de gestão de produto Testes de consulta de produto Validar se o ID existe",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//arrange\nconst idProduto = 100;\nconst mensagemEsperada = 'Produto inexistente';\n//act - assert\nassert.throws(() => {\n    consultarTituloPorId(idProduto);\n}, Error, mensagemEsperada)",
+                  "err": {},
+                  "uuid": "92d16c7b-6835-4cd7-9595-70950e2c2b71",
+                  "parentUUID": "8380ada7-c5a7-47e2-a2ea-49a89b649d4f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "40b9e410-0cb6-4227-a3ff-cd6147710505",
+                "9afa229d-6791-4f51-bdd8-0eee53955668",
+                "92d16c7b-6835-4cd7-9595-70950e2c2b71"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
