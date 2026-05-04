@@ -40,5 +40,5 @@ export function consultarTituloPorId(Id) {
       return livros[i].titulo;
     }
   }
-  throw new Error('Produto inexistente');
+  return 'Produto inexistente'
 }

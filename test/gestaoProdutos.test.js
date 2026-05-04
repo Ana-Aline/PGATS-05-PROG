@@ -33,14 +33,10 @@ describe("Testes de gestão de produto", function () {
       const idProduto = 100;
       const mensagemEsperada = "Produto inexistente";
 
-      //act - assert
-      assert.throws(
-        () => {
-          consultarTituloPorId(idProduto);
-        },
-        Error,
-        mensagemEsperada,
-      );
+      
+        const mensagemRecebida = consultarTituloPorId(idProduto);
+
+      assert.equal(mensagemEsperada, mensagemRecebida)
     });
   });
 });
